@@ -22,9 +22,21 @@ db.createUser(
     ]
   }
 )
+db.createUser(
+  {
+    user: "user_testing",
+    pwd: "password_testing",
+    roles: [
+      {
+        role: "readWrite",
+        db: "db_testing"
+      }
+    ]
+  }
+)
 db.getCollection('funnels').insertOne({
-  _id: ObjectId("111111111111111111111111"),
-  userId: ObjectId("111111111111111111111111"),
+  _id: ObjectId("5ddbcb572da64897712b44ce"),
+  userId: ObjectId("5ddbcb6669035097d3d8a058"),
   name: 'funnel_test',
   saved: true,
   start: '2019-08-01T21:59:59.999Z',
