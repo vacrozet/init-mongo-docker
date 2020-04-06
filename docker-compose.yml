@@ -4,15 +4,8 @@ services:
     image: mongo:4.2
     container_name: 'mongo'
     environment:
-      - MONGO_INITDB_DATABASE=ermes_funnel
-      - MONGO_INITDB_ROOT_USERNAME=valentin
-      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=root-db
     volumes:
       - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
     ports:
       - "27017:27017"
-    networks:
-      - room
-
-networks:
-  room:
